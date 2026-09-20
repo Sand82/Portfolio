@@ -2,6 +2,34 @@ import type { Project } from "../Models/Project";
 
 export const github = "https://github.com/Sand82";
 
+export const contactData = {
+  kicker: "LET'S CONNECT",
+  title: "Have a project",
+  titleAccent: "in mind?",
+  email: "aleksandarsteffanov@gmail.com",
+  phone: "+359 885 508 911",
+  phoneHref: "tel:+359885508911",
+  githubLabel: "github.com/Sand82",
+};
+
+export const heroData = {
+  availability: "Open to .NET / Web opportunities",
+  kicker: "SOFTWARE DEVELOPER · SOFIA, BULGARIA",
+  firstName: "Aleksandar",
+  lastName: "Stefanov",
+  role: ".NET / FULL-STACK WEB DEVELOPER",
+  description:
+    "Software Developer with nearly four years of professional experience at DXC Technology, working across .NET, ASP.NET Core, C#, React, Angular, TypeScript/JavaScript, MSSQL, REST APIs and Microsoft Power Platform.",
+  cvPath: "/Aleksandar_Stefanov_CV.pdf",
+  terminal: {
+    name: "Aleksandar",
+    focus: ".NET + Web",
+    frontend: ["React", "Angular"],
+    backend: ["C#", "ASP.NET Core"],
+    cloud: ["Azure", "Firebase"],
+  },
+};
+
 export const navigationItems = [
   ["about", "About"],
   ["experience", "Experience"],
