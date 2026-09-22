@@ -1,10 +1,11 @@
-import Footer from "./Components/Footer";
-import Header from "./Components/Header";
-import Main from "./Components/Main";
+import Footer from "./Components/Footer/Footer";
+import Header from "./Components/Header/Header";
+import Main from "./Components/Main/Main";
+import styles from "./App.module.css";
 
-const App = () => {
+const App = (): React.JSX.Element => {
   return (
-    <div className="app">
+    <div className={styles.app}>
       <Header />
       <Main />
       <Footer />

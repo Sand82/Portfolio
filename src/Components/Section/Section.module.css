@@ -1,0 +1,58 @@
+.section {
+  padding: 100px 10vw;
+  border-top: 1px solid var(--line);
+  max-width: 1500px;
+  margin: auto;
+}
+
+.sectionHead {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 30px;
+  margin-bottom: 55px;
+}
+
+.sectionHead span {
+  font: 500 11px "DM Mono";
+  color: var(--accent);
+  padding-top: 12px;
+}
+
+.section h2 {
+  font-size: clamp(38px, 5vw, 65px);
+  letter-spacing: -3px;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding: 75px 7vw;
+  }
+}
+
+@media (max-width: 650px) {
+  .section {
+    padding: 65px 6vw;
+  }
+
+  .sectionHead {
+    display: block;
+    margin-bottom: 35px;
+  }
+
+  .sectionHead span {
+    display: block;
+    margin-bottom: 12px;
+  }
+}
+
+@media print {
+  .section {
+    padding: 30px 0;
+    border: 0;
+  }
+
+  .sectionHead {
+    margin-bottom: 20px;
+  }
+}

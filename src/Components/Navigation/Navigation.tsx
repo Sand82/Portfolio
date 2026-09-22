@@ -1,4 +1,5 @@
-import { navigationItems } from "../Data/Portfolio";
+import { navigationItems } from "../../Data/Portfolio";
+import styles from "./Navigation.module.css";
 
 interface NavigationProps {
   isOpen: boolean;
@@ -7,13 +8,13 @@ interface NavigationProps {
 
 const Navigation = ({ isOpen, onNavigate }: NavigationProps) => {
   return (
-    <nav className={isOpen ? "nav open" : "nav"}>
+    <nav className={`${styles.nav} ${isOpen ? styles.open : ""}`}>
       {navigationItems.map(([id, label]) => (
         <a key={id} href={`#${id}`} onClick={onNavigate}>
           {label}
         </a>
       ))}
-      <a className="nav-cta" href="#contact">
+      <a className={styles.navCta} href="#contact">
         Contact
       </a>
     </nav>

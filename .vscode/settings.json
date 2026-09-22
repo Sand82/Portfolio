@@ -1,5 +1,11 @@
 {
+  "editor.cursorStyle": "line",
+  "editor.cursorWidth": 2,
+  "editor.cursorBlinking": "blink",
   "workbench.colorCustomizations": {
     "editorCursor.foreground": "#000000"
-  }
+  },
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorBlinking": "blink",
+  "terminal.integrated.cursorForeground": "#000000"
 }

@@ -19,7 +19,7 @@ export const heroData = {
   lastName: "Stefanov",
   role: ".NET / FULL-STACK WEB DEVELOPER",
   description:
-    "Software Developer with nearly four years of professional experience at DXC Technology, working across .NET, ASP.NET Core, C#, React, Angular, TypeScript/JavaScript, MSSQL, REST APIs and Microsoft Power Platform.",
+    "AI-focused Software Developer with experience building AI-powered applications and nearly four years of professional experience at DXC Technology, working across .NET, ASP.NET Core, C#, React, Angular, TypeScript/JavaScript, MSSQL, REST APIs and Microsoft Power Platform.",
   cvPath: "/Aleksandar_Stefanov_CV.pdf",
   terminal: {
     name: "Aleksandar",
@@ -63,8 +63,7 @@ export const skills = {
   "Microsoft Platform": [
     "Power Apps",
     "Power Automate",
-    "SharePoint",
-    "Power BI",
+    "SharePoint",    
   ],
   Engineering: [
     "Git / GitHub",
@@ -151,14 +150,29 @@ export const personalProjects = [
     "https://github.com/Sand82/BakeryProject",
   ],
   [
-    "Mini Football Statistic",
-    "Application for recording results from a mini football tournament.",
-    "https://github.com/Sand82/MiniFootballStatistic",
-  ],
-  [
     "Movie Gallery",
     "A simplified IMDb-style movie gallery application.",
     "https://github.com/Sand82/MovieGaller",
+  ],  
+  [
+    "EShop",
+    "E-commerce platform, using microservices architecture",
+    "https://github.com/Sand82/EShop",
+  ],
+  [
+   "Snake Game Project",
+    "Classic arcade console game.",
+    "https://github.com/Sand82/Snake",
+  ],
+  [
+   "AI-Chat-Bot",
+    "Chat application powered by NVIDIA's Nemotron-3 AI model.",
+    "https://github.com/Sand82/AI-Chat-Bot",
+  ],
+  [
+   "Mini Football Statistic",
+    "Application for recording results from a mini football tournament.",
+    "https://github.com/Sand82/MiniFootballStatistic",
   ],
 ] as const;
 
@@ -173,4 +187,18 @@ export const certificates = [
   "JavaScript Applications (2021)",
   "Containers & Cloud (2023)",
   "Software Engineering & DevOps (2023)",
+];
+
+export const relevantTraining = [
+  "C# Fundamentals & Advanced",
+  "C# OOP",
+  "C# Web Basics",
+  "ASP.NET Core",
+  "Entity Framework Core",
+  "MS SQL",
+  "JavaScript Applications",
+  "React",
+  "Containers & Cloud",
+  "Software Engineering & DevOps",
+  "Angular",  
 ];

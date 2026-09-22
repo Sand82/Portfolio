@@ -6,42 +6,44 @@ import {
   GraduationCap,
   MapPin,
 } from "lucide-react";
-import Contact from "./Contact";
-import Hero from "./Hero";
-import Section from "./Section";
+import Contact from "../Contact/Contact";
+import Hero from "../Hero/Hero";
+import Section from "../Section/Section";
 import {
   certificates,
   personalProjects,
   projects,
+  relevantTraining,
   skills,
-} from "../Data/Portfolio";
+} from "../../Data/Portfolio";
+import styles from "./Main.module.css";
 
-const Main = () => {
+const Main = () : React.JSX.Element => {
   return (
-    <main>
+    <main className={styles.main}>
       <Hero />
       <Section id="experience" sectionNumber="01" title="Professional experience">
-        <div className="timeline">
-          <article className="job">
-            <div className="job-date">
+        <div className={styles.timeline}>
+          <article className={styles.job}>
+            <div className={styles.jobDate}>
               <CalendarDays size={15} />
               Sep 2022 — Present
             </div>
             <div>
               <h3>DXC Technology</h3>
-              <p className="role">Software Developer / Full-Stack Developer</p>
-              <p className="muted">
+              <p className={styles.role}>Software Developer / Full-Stack Developer</p>
+              <p className={styles.muted}>
                 <MapPin size={14} />
                 Sofia, Bulgaria
               </p>
               {projects.map((p) => (
-                <div className="project-entry" key={p[0]}>
-                  <div className="project-title">
+                <div className={styles.projectEntry} key={p[0]}>
+                  <div className={styles.projectTitle}>
                     <h4>{p[0]}</h4>
                     <span>{p[1]}</span>
                   </div>
-                  <p className="muted">{p[2]}</p>
-                  <p className="stack">{p[3]}</p>
+                  <p className={styles.muted}>{p[2]}</p>
+                  <p className={styles.stack}>{p[3]}</p>
                   <ul>
                     {p[4].map((x) => (
                       <li key={x}>{x}</li>
@@ -51,15 +53,15 @@ const Main = () => {
               ))}
             </div>
           </article>
-          <article className="job">
-            <div className="job-date">
+          <article className={styles.job}>
+            <div className={styles.jobDate}>
               <CalendarDays size={15} />
               Apr 2012 — Jun 2022
             </div>
             <div>
               <h3>Actavis / Vetprom</h3>
-              <p className="role">Chemist / Chemical Analyst</p>
-              <p className="muted">
+              <p className={styles.role}>Chemist / Chemical Analyst</p>
+              <p className={styles.muted}>
                 <MapPin size={14} />
                 Dupnica / Radomir, Bulgaria
               </p>
@@ -74,12 +76,12 @@ const Main = () => {
         </div>
       </Section>
       <Section id="skills" sectionNumber="02" title="Technical skills">
-        <div className="skill-grid">
+        <div className={styles.skillGrid}>
           {Object.entries(skills).map(([g, items]) => (
-            <div className="skill-card" key={g}>
+            <div className={styles.skillCard} key={g}>
               <Code2 size={18} />
               <h3>{g}</h3>
-              <div className="chips">
+              <div className={styles.chips}>
                 {items.map((x) => (
                   <span key={x}>{x}</span>
                 ))}
@@ -89,10 +91,10 @@ const Main = () => {
         </div>
       </Section>
       <Section id="projects" sectionNumber="03" title="Selected personal projects">
-        <div className="cards">
+        <div className={styles.cards}>
           {personalProjects.map((p, i) => (
             <a
-              className="project-card"
+              className={styles.projectCard}
               href={p[2]}
               target="_blank"
               rel="noreferrer"
@@ -110,8 +112,8 @@ const Main = () => {
         </div>
       </Section>
       <Section id="education" sectionNumber="04" title="Education & training">
-        <div className="education">
-          <div className="edu-item">
+        <div className={styles.education}>
+          <div className={styles.eduItem}>
             <GraduationCap />
             <div>
               <h3>Software University (SoftUni)</h3>
@@ -119,7 +121,7 @@ const Main = () => {
               <span>2019 — 2022</span>
             </div>
           </div>
-          <div className="edu-item">
+          <div className={styles.eduItem}>
             <GraduationCap />
             <div>
               <h3>
@@ -130,17 +132,17 @@ const Main = () => {
             </div>
           </div>
         </div>
-        <div className="training">
+        <div className={styles.training}>
           <h3>Relevant training</h3>
-          <p>
-            C# Fundamentals & Advanced · C# OOP · C# Web Basics · ASP.NET Core ·
-            Entity Framework Core · MS SQL · JavaScript Applications · React ·
-            Containers & Cloud · Software Engineering & DevOps · Angular · Java
-          </p>
+          <div className={styles.trainingTags}>
+            {relevantTraining.map((item) => (
+              <span key={item}>{item}</span>
+            ))}
+          </div>
         </div>
-        <div className="certs">
+        <div className={styles.certs}>
           <h3>Certificates</h3>
-          <div className="cert-list">
+          <div className={styles.certList}>
             {certificates.map((x) => (
               <span key={x}>{x}</span>
             ))}

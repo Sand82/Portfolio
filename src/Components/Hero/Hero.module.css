@@ -1,0 +1,180 @@
+.hero {
+  min-height: calc(100vh - 72px);
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 8vw;
+  padding: 80px 10vw;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--line);
+  padding: 8px 11px;
+  font: 500 11px "DM Mono";
+  margin-bottom: 28px;
+}
+
+.availability i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4c9d64;
+}
+
+.kicker {
+  font: 500 11px "DM Mono";
+  letter-spacing: 1.8px;
+  color: var(--muted);
+  margin: 0 0 15px;
+}
+
+.hero h1 {
+  font-size: clamp(56px, 7vw, 105px);
+  line-height: 0.9;
+  letter-spacing: -5px;
+  margin: 0 0 24px;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+.heroRole {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.heroText {
+  max-width: 650px;
+  line-height: 1.8;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 17px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.primary {
+  background: var(--ink);
+  color: white;
+}
+
+.secondary {
+  border: 1px solid var(--line);
+  background: white;
+}
+
+.heroCard {
+  background: #17191d;
+  min-height: 370px;
+  box-shadow: 24px 28px 0 #ece8df;
+}
+
+.terminalTop {
+  height: 40px;
+  border-bottom: 1px solid #333840;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 16px;
+}
+
+.terminalTop span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #555;
+}
+
+.terminal {
+  font: 13px/2 "DM Mono";
+  color: #e8e6df;
+  padding: 24px 22px;
+}
+
+.terminal b {
+  color: #676b73;
+  font-weight: 400;
+  display: inline-block;
+  width: 25px;
+}
+
+.terminal i {
+  color: #e68aa5;
+  font-style: normal;
+}
+
+.terminal em {
+  color: #9dcc87;
+  font-style: normal;
+}
+
+.cursor {
+  margin-left: 25px;
+  color: var(--accent);
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 70px 7vw;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero {
+    padding: 60px 6vw;
+    min-height: auto;
+  }
+
+  .heroCard {
+    min-height: auto;
+    box-shadow: 12px 14px 0 #ece8df;
+  }
+
+  .terminal {
+    font-size: 10px;
+    padding: 17px 10px;
+    overflow: auto;
+  }
+
+  .hero h1 {
+    letter-spacing: -3px;
+  }
+
+  .actions {
+    flex-wrap: wrap;
+  }
+}
+
+@media print {
+  .heroCard,
+  .availability,
+  .actions {
+    display: none;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 20px 0;
+  }
+}

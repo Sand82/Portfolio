@@ -1,30 +1,31 @@
 import { ArrowUpRight, Download, Github } from "lucide-react";
-import { github, heroData } from "../Data/Portfolio";
+import { github, heroData } from "../../Data/Portfolio";
+import styles from "./Hero.module.css";
 
-const Hero = () => {
+const Hero = () : React.JSX.Element => {
   const { terminal } = heroData;
 
   return (
-    <section id="about" className="hero">
+    <section id="about" className={styles.hero}>
       <div>
-        <div className="availability">
+        <div className={styles.availability}>
           <i /> {heroData.availability}
         </div>
-        <p className="kicker">{heroData.kicker}</p>
+        <p className={styles.kicker}>{heroData.kicker}</p>
         <h1>
           {heroData.firstName}
           <br />
           <em>{heroData.lastName}</em>
         </h1>
-        <p className="hero-role">{heroData.role}</p>
-        <p className="hero-text">{heroData.description}</p>
-        <div className="actions">
-          <a className="button primary" href={heroData.cvPath} download>
+        <p className={styles.heroRole}>{heroData.role}</p>
+        <p className={styles.heroText}>{heroData.description}</p>
+        <div className={styles.actions}>
+          <a className={`${styles.button} ${styles.primary}`} href={heroData.cvPath} download>
             <Download size={17} />
             Download CV
           </a>
           <a
-            className="button secondary"
+            className={`${styles.button} ${styles.secondary}`}
             href={github}
             target="_blank"
             rel="noreferrer"
@@ -34,13 +35,13 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      <div className="hero-card">
-        <div className="terminal-top">
+      <div className={styles.heroCard}>
+        <div className={styles.terminalTop}>
           <span />
           <span />
           <span />
         </div>
-        <div className="terminal">
+        <div className={styles.terminal}>
           <div>
             <b>01</b>
             <i>const</i> developer = &#123;
@@ -66,7 +67,7 @@ const Hero = () => {
           <div>
             <b>07</b>&#125;;
           </div>
-          <div className="cursor">_</div>
+          <div className={styles.cursor}>_</div>
         </div>
       </div>
     </section>

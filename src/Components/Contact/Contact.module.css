@@ -1,0 +1,72 @@
+.contact {
+  margin-top: 100px;
+  padding: 85px 10vw;
+  background: #17191d;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.contact h2 {
+  font-size: clamp(42px, 6vw, 78px);
+  letter-spacing: -4px;
+  line-height: 0.95;
+  margin: 0;
+}
+
+.contact h2 em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+.contactLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+
+.contactLinks a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  border-bottom: 1px solid #393c41;
+  padding-bottom: 14px;
+}
+
+.contactLinks a:hover {
+  color: #ff9a78;
+}
+
+.kicker {
+  font: 500 11px "DM Mono";
+  letter-spacing: 1.8px;
+  color: var(--muted);
+  margin: 0 0 15px;
+}
+
+@media (max-width: 900px) {
+  .contact {
+    padding: 70px 7vw;
+  }
+}
+
+@media (max-width: 650px) {
+  .contact {
+    margin-top: 65px;
+    grid-template-columns: 1fr;
+    padding: 65px 6vw;
+  }
+
+  .contact h2 {
+    letter-spacing: -2px;
+  }
+}
+
+@media print {
+  .contact {
+    display: none;
+  }
+}

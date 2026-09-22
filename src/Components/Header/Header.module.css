@@ -1,0 +1,47 @@
+.topbar {
+  height: 72px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vw;
+  position: sticky;
+  top: 0;
+  background: #fbfaf7ee;
+  backdrop-filter: blur(14px);
+  z-index: 10;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: -1px;
+}
+
+.brand span {
+  color: var(--accent);
+}
+
+.menu {
+  display: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+@media (max-width: 650px) {
+  .topbar {
+    padding: 0 6vw;
+  }
+
+  .menu {
+    display: block;
+  }
+}
+
+@media print {
+  .topbar,
+  .menu {
+    display: none;
+  }
+}
